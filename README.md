@@ -10,10 +10,12 @@ Welcome to the KeyBank Hackathon! This hands-on workshop will introduce you to *
 1. [What You'll Learn](#1-what-youll-learn)
 2. [Getting Started - Environment Setup](#2-getting-started---environment-setup)
    - [2.1 Create Your Red Hat Ansible Lightspeed Trial Account](#21-create-your-red-hat-ansible-lightspeed-trial-account)
-   - [2.2 Install Visual Studio Code](#22-install-visual-studio-code)
-   - [2.3 Install the Red Hat Ansible Extension](#23-install-the-red-hat-ansible-extension)
-   - [2.4 Connect to Ansible Lightspeed](#24-connect-to-ansible-lightspeed)
-   - [2.5 Verify Your Setup & Pre-Hackathon Checklist](#25-verify-your-setup--pre-hackathon-checklist)
+   - [2.2 Install Git](#22-install-git)
+   - [2.3 Install Visual Studio Code](#23-install-visual-studio-code)
+   - [2.4 Clone the Hackathon Repository](#24-clone-the-hackathon-repository)
+   - [2.5 Install the Red Hat Ansible Extension](#25-install-the-red-hat-ansible-extension)
+   - [2.6 Connect to Ansible Lightspeed](#26-connect-to-ansible-lightspeed)
+   - [2.7 Verify Your Setup & Pre-Hackathon Checklist](#27-verify-your-setup--pre-hackathon-checklist)
 
 ### Hackathon Exercises
 3. [Workshop Exercises](#3-workshop-exercises)
@@ -81,7 +83,45 @@ Before the hackathon, you **MUST** complete the following setup steps:
 
 ---
 
-### 2.2 Install Visual Studio Code
+### 2.2 Install Git
+
+**Git** is required to clone the hackathon repository. Follow the instructions for your operating system:
+
+#### For Windows:
+
+1. Download Git from: **https://git-scm.com/download/win**
+2. Run the installer
+3. During installation, accept the default settings (recommended)
+4. Click **Install** and wait for completion
+5. **Verify installation**: Open Command Prompt and type:
+   ```
+   git --version
+   ```
+   You should see something like `git version 2.x.x`
+
+#### For macOS:
+
+1. Open **Terminal** (Applications → Utilities → Terminal)
+2. Type the following command and press Enter:
+   ```
+   git --version
+   ```
+3. If Git is not installed, macOS will prompt you to install it automatically
+4. Follow the prompts to install **Command Line Developer Tools**
+5. Once installed, verify by typing `git --version` again
+
+#### For Linux:
+
+1. Open Terminal
+2. Install Git using your package manager:
+   - **Ubuntu/Debian**: `sudo apt-get install git`
+   - **Fedora**: `sudo dnf install git`
+   - **CentOS**: `sudo yum install git`
+3. Verify installation: `git --version`
+
+---
+
+### 2.3 Install Visual Studio Code
 
 1. Download and install **Visual Studio Code** for your operating system:
    **https://code.visualstudio.com/download**
@@ -95,7 +135,52 @@ Before the hackathon, you **MUST** complete the following setup steps:
 
 ---
 
-### 2.3 Install the Red Hat Ansible Extension
+### 2.4 Clone the Hackathon Repository
+
+Now you'll clone the hackathon repository directly into VS Code.
+
+**Step 1: Open VS Code**
+
+1. Launch **Visual Studio Code**
+
+**Step 2: Open the Command Palette**
+
+1. Click **View** → **Command Palette** (or press `Cmd+Shift+P` on Mac, `Ctrl+Shift+P` on Windows/Linux)
+2. Type: `Git: Clone`
+3. Select **Git: Clone** from the dropdown
+
+**Step 3: Enter the Repository URL**
+
+1. Paste this URL into the input box:
+   ```
+   https://github.com/baacha123/keybank-hakathon.git
+   ```
+2. Press **Enter**
+
+**Step 4: Choose a Location**
+
+1. A file browser will appear
+2. Navigate to where you want to save the repository (e.g., **Desktop** or **Documents**)
+3. Click **Select as Repository Destination** (or **Select Repository Location**)
+
+**Step 5: Open the Repository**
+
+1. VS Code will clone the repository (this may take a minute)
+2. When prompted **"Would you like to open the cloned repository?"**, click **Open**
+3. The repository folder will open in VS Code
+
+**Step 6: Verify the Clone**
+
+1. In the **left sidebar** (Explorer panel), you should see:
+   - `README.md`
+   - `images/` folder
+   - `watsonx-code-assistant-for-ansible/` folder
+
+**✅ Success!** You now have all the hackathon exercise files on your computer!
+
+---
+
+### 2.5 Install the Red Hat Ansible Extension
 
 1. Open the Ansible extension marketplace page:
    **https://marketplace.visualstudio.com/items?itemName=redhat.ansible**
@@ -117,7 +202,7 @@ Before the hackathon, you **MUST** complete the following setup steps:
 
 ---
 
-### 2.4 Connect to Ansible Lightspeed
+### 2.6 Connect to Ansible Lightspeed
 
 **Step 1: Find the Ansible Extension**
 
@@ -164,15 +249,17 @@ Before the hackathon, you **MUST** complete the following setup steps:
 
 ---
 
-### 2.5 Verify Your Setup & Pre-Hackathon Checklist
+### 2.7 Verify Your Setup & Pre-Hackathon Checklist
 
 ✅ **Complete by EOD October 20th, 2024:**
 
 Please ensure all of the following are completed before the hackathon:
 
+- [ ] **Git** installed on your laptop
+- [ ] **Visual Studio Code** installed on your laptop
+- [ ] **Hackathon repository** cloned from GitHub
 - [ ] **Red Hat trial account** created and activated (60-day subscription)
 - [ ] **Email sent** to workshop organizers confirming registration completion
-- [ ] **Visual Studio Code** installed on your laptop
 - [ ] **Red Hat Ansible extension** installed in VS Code
 - [ ] **Ansible Lightspeed** connected and authenticated
 - [ ] **"Lightspeed" indicator** visible in the bottom-right corner of VS Code
@@ -319,26 +406,27 @@ This comprehensive exercise uses **Ansible roles** to organize your playbook pro
 
 ### Exercise 1: Install and Configure httpd (Role 1)
 
-**Step 1: Download the Exercise Files**
+**Step 1: Navigate to the Exercise Files**
 
-1. The instructor will provide you with the exercise folder or a link to download it
-2. **Extract/unzip** the folder to your Desktop or Documents folder
-3. In VS Code, click **File** → **Open Folder**
-4. Navigate to the extracted folder: `End to End complete Apache Install/Config/`
-5. Click **Select Folder** (or **Open** on Mac)
+If you haven't already, make sure the cloned repository is open in VS Code (you should have done this in section 2.4).
 
-**Step 2: Navigate to the httpd Role File**
+**Step 2: Open the Apache Exercise Folder**
 
-1. In the **left sidebar** (Explorer panel) of VS Code, you'll see a folder structure
-2. Click to expand: **roles** folder
-3. Click to expand: **httpd** folder
-4. Click to expand: **tasks** folder
-5. **Click on the file**: `main.yml`
-6. The file will open in the main editor area
+1. In VS Code, in the **left sidebar** (Explorer panel), navigate to:
+   - `watsonx-code-assistant-for-ansible` → `End to End complete Apache Install` → `Config`
+2. You should see folders like `roles`, `demo-setup`, and files like `apacheservers.yml`
+
+**Step 3: Navigate to the httpd Role File**
+
+1. Click to expand: **roles** folder
+2. Click to expand: **httpd** folder
+3. Click to expand: **tasks** folder
+4. **Click on the file**: `main.yml`
+5. The file will open in the main editor area
 
 You should see a file with commented lines starting with `#`
 
-**Step 3: Generate Task 1 - Create Directory**
+**Step 4: Generate Task 1 - Create Directory**
 
 1. Find the line: `# - name: Create /ibmdata/htdocs directory root:root`
 2. **Uncomment it** - Delete the `#` symbol and space. It should look like:
@@ -352,7 +440,7 @@ You should see a file with commented lines starting with `#`
 7. **Press TAB** to accept
 8. ✅ Task 1 complete!
 
-**Step 4: Generate Task 2 - Install httpd**
+**Step 5: Generate Task 2 - Install httpd**
 
 1. Find the line: `# - name: Install httpd`
 2. **Uncomment it** - Delete the `#` symbol and space
@@ -362,7 +450,7 @@ You should see a file with commented lines starting with `#`
 6. **Press TAB** to accept
 7. ✅ Task 2 complete!
 
-**Step 5: Generate Task 3 - Configure SELinux Port**
+**Step 6: Generate Task 3 - Configure SELinux Port**
 
 1. Find the line: `# - name: Configure seport to listen on tcp 8080 and 8443 using community.general.seport`
 2. **Uncomment it** - Delete the `#` symbol and space
@@ -372,7 +460,7 @@ You should see a file with commented lines starting with `#`
 6. **Press TAB** to accept
 7. ✅ Task 3 complete!
 
-**Step 6: Generate Task 4 - Enable httpd at Boot**
+**Step 7: Generate Task 4 - Enable httpd at Boot**
 
 1. Find the line: `# - name: Enable httpd to start at boot`
 2. **Uncomment it** - Delete the `#` symbol and space
@@ -382,7 +470,7 @@ You should see a file with commented lines starting with `#`
 6. **Press TAB** to accept
 7. ✅ Task 4 complete!
 
-**Step 7: Generate Task 5 - Open Firewall Ports**
+**Step 8: Generate Task 5 - Open Firewall Ports**
 
 1. Find the line: `# - name: Open firewall ports 8080 & 8443`
 2. **Uncomment it** - Delete the `#` symbol and space
@@ -392,7 +480,7 @@ You should see a file with commented lines starting with `#`
 6. **Press TAB** to accept
 7. ✅ Task 5 complete!
 
-**Step 8: Save Your Work**
+**Step 9: Save Your Work**
 
 1. Click **File** → **Save** (or press `Cmd+S` / `Ctrl+S`)
 2. You should see the dot on the file tab disappear (this means it's saved)
