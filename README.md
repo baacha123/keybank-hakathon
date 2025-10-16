@@ -19,24 +19,6 @@ Welcome to the KeyBank Hackathon! This hands-on workshop will introduce you to *
 
 ### Hackathon Exercises
 3. [Workshop Exercises](#3-workshop-exercises)
-   - [3.1 Warm-Up Exercise: Simple Web Server Configuration](#31-warm-up-exercise-simple-web-server-configuration)
-   - [3.2 Main Exercise: End-to-End Apache Web Server Deployment](#32-main-exercise-end-to-end-apache-web-server-deployment)
-     - [Exercise 1: Install and Configure httpd](#exercise-1-install-and-configure-httpd-role-1)
-     - [Exercise 2: Configure httpd.conf](#exercise-2-configure-httpdconf-role-2)
-     - [Exercise 3: Deploy index.html](#exercise-3-deploy-indexhtml-role-3)
-   - [3.3 Exercise 4: Provision AWS EC2 Instance](#33-exercise-4-provision-aws-ec2-instance-cloud-infrastructure)
-
-### Post-Hackathon
-4. [Take-Home Optional Challenges](#4-take-home-optional-challenges)
-   - [Challenge 1: PostgreSQL Database & PGAdmin Container Setup](#challenge-1-postgresql-database--pgadmin-container-setup)
-   - [Challenge 2: Full Playbook Generation - RHEL Patching Workflow](#challenge-2-full-playbook-generation---rhel-patching-workflow)
-5. [Additional Resources](#5-additional-resources)
-6. [Hackathon Day Schedule](#6-hackathon-day-schedule)
-7. [Tips for Success](#7-tips-for-success)
-8. [Getting Help](#8-getting-help)
-9. [Contact Information](#9-contact-information)
-10. [Useful Resources](#10-useful-resources)
-11. [Post-Workshop Feedback](#11-post-workshop-feedback)
 
 ---
 
