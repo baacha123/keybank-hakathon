@@ -19,7 +19,7 @@ Welcome to the KeyBank Hackathon! This hands-on workshop will introduce you to *
 
 ### Hackathon Exercises
 3. [Workshop Exercises](#3-workshop-exercises)
-   - [3.1 Warm-Up Exercise: Simple Web Server Configuration](#31-warm-up-exercise-simple-web-server-configuration)
+
 
 ---
 
@@ -234,7 +234,7 @@ Now you'll clone the hackathon repository directly into VS Code.
 
 ### 2.7 Verify Your Setup & Pre-Hackathon Checklist
 
-✅ **Complete by EOD October 20th, 2025:**
+✅ **Complete by EOD October 20th, 2024:**
 
 Please ensure all of the following are completed before the hackathon:
 
@@ -256,4 +256,4 @@ Please ensure all of the following are completed before the hackathon:
 
 During the hackathon, you will complete hands-on exercises using IBM watsonx Code Assistant for Ansible Lightspeed. We'll start with a simple warm-up exercise, then move to a comprehensive Apache web server deployment.
 
-
+---
