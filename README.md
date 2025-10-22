@@ -366,6 +366,22 @@ This exercise demonstrates both **single-task** and **multi-task** generation in
 
 ---
 
+#### 🔑 Important: Understanding the Two Generation Patterns
+
+**Pattern 1: Lines with `- name:` (Single-Task Generation)**
+- These lines start with `# - name: Do something`
+- **You MUST uncomment** (remove the `#` and space)
+- Then press ENTER at the end of the line
+- Example: `# - name: Install httpd package` → uncomment to `- name: Install httpd package`
+
+**Pattern 2: Lines WITHOUT `- name:` (Multi-Task Generation)**
+- These lines start with `# Do something & Do another thing & ...`
+- **You MUST KEEP the `#`** (do NOT uncomment!)
+- Just click at the end of the line and press ENTER
+- Example: `# Install httpd & Start httpd & Enable httpd` → keep the `#` and press ENTER
+
+---
+
 #### Option A: Single-Task Generation
 
 **Step 1: Create a New File in VS Code**
@@ -463,8 +479,8 @@ Copy and paste the following code:
 **Step 3: Generate Multiple Tasks at Once**
 
 1. Find the line starting with `# Install httpd package & Copy...`
-2. **Uncomment it** - Delete the `#` symbol and space at the beginning
-3. **Click at the end of this line**
+2. **Keep the `#` symbol** - Do NOT uncomment this line (this is different from single-task generation!)
+3. **Click at the end of this line** (after "service")
 4. **Press ENTER**
 5. **Wait for the AI** - it will generate ALL THREE tasks at once! 🎯
 6. **Press TAB** to accept all suggestions
@@ -899,6 +915,16 @@ Create a new file called `install_pgsql-multi-task.yml` and copy this template:
     # Install postgresql-server & Run postgresql setup command & Start and enable postgresql service
 ```
 
+**Instructions for Multi-Task Generation:**
+
+1. Find the line: `# Install postgresql-server & Run postgresql setup command...`
+2. **Keep the `#` symbol** - Do NOT uncomment this line
+3. **Click at the end of this line** (after "service")
+4. **Press ENTER**
+5. **Wait for the AI** - it will generate all three tasks at once
+6. **Press TAB** to accept all suggestions
+7. **Save your file**
+
 ---
 
 #### Part 2: Deploy PGAdmin Container
@@ -970,6 +996,16 @@ Create a new file called `demo_pgadmin_podman-multi-task.yml` and copy this temp
   tasks:
     # Run podman container using pgadmin_container var & Start, enable and reload daemon for {{ pgadmin_service_name }}
 ```
+
+**Instructions for Multi-Task Generation:**
+
+1. Find the line: `# Run podman container using pgadmin_container var & Start, enable and reload daemon...`
+2. **Keep the `#` symbol** - Do NOT uncomment this line
+3. **Click at the end of this line** (after the closing `}}`)
+4. **Press ENTER**
+5. **Wait for the AI** - it will generate both tasks at once
+6. **Press TAB** to accept all suggestions
+7. **Save your file**
 
 **What you'll learn**:
 - How Ansible Lightspeed understands and uses variables in prompts (the `pgadmin_container` variable)
